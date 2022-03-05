@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="capitalize bg-zinc-100">
 
     <!-- navbar -->
-    <nav class="bg-gradient-to-b from-blue-700 to-blue-400 w-full p-3 fixed top-0">
+    <nav class="bg-gradient-to-b from-blue-700 to-blue-400 w-full p-3 fixed top-0 z-40">
         <div class="container">
             <div class="flex justify-around w-full items-center">
                 <div class="text-white">
@@ -37,27 +37,96 @@
     <!-- not yet -->
     <!-- end recommended artikel -->
 
-    <!-- postingan -->
     <div class="container">
-        <div class="row-auto  mt-24">
-            <div class="grid grid-cols-3 gap-6">
-                <div class="grid grid-cols-1 col-span-2 md:grid-cols-2 gap-3">
-                    <div class="border border-slate-700 p-3">
-                        <img src="" alt="">
-                    </div>
-                    <div class="border border-slate-700">
+        <!-- postingan -->
+        <div class="row-auto mt-24">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="grid row-auto col-span-2">
+                    <h1 class="font-bold text-2xl italic relative before:absolute before:border-b-2 before:w-full before:top-10 before:border-slate-300">New Post!</h1>
 
+                    <!-- post -->
+                    <div class="grid grid-cols-1  md:grid-cols-5 gap-5 my-5 border bg-white px-2 md:p-0 shadow-md hover:shadow-xl duration-200 ">
+                        <div class="grid col-span-2 justify-start">
+                            <span class="p-1 m-2 bg-red-500 text-white absolute rounded-lg rounded-t-none rounded-r-lg">New!</span>
+                            <img src="img/elizeu-dias-SEq9dyZSe6c-unsplash.jpg" alt="thumbnail" class="h-full">
+                        </div>
+                        <div class="grid row-auto col-span-3 font-sans py-4 mx-4">
+                            <a href="/" class="hover:text-blue-600 duration-200">
+                                <h1 class="text-2xl font-bold">beautifull title here</h1>
+
+                                <p class="italic text-slate-400">20 maret 2022</p>
+                                <div class="h-24 overflow-hidden">
+                                    <p class="text-slate-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad commodi sequi sed at, id unde similique adipisci architecto, eum optio dolorum, ullam omnis reiciendis nulla cupiditate blanditiis rerum repellendus Lorem
+                                        ipsum dolor sit amet consectetur adipisicing elit. Velit rem magnam natus sapiente? quae?
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="" class="mt-2 italic opacity-80 hover:text-blue-600 duration-200"><span>By: </span>Harubic</a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1  md:grid-cols-5 gap-5 my-5 border bg-white px-2 md:p-0 shadow-md hover:shadow-xl duration-200">
+                        <div class="grid col-span-2 justify-start">
+                            <span class="p-1 m-2 bg-red-500 text-white absolute rounded-lg rounded-t-none rounded-r-lg">New!</span>
+                            <img src="img/heroSection.jpg" alt="thumbnail" class="h-full">
+                        </div>
+                        <div class="grid row-auto col-span-3 font-sans py-4 mx-4">
+                            <a href="/" class="hover:text-blue-600 duration-200">
+                                <h1 class="text-2xl font-bold">beautifull title here</h1>
+
+                                <p class="italic text-slate-400">20 maret 2022</p>
+                                <div class="h-24 overflow-hidden">
+                                    <p class="text-slate-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad commodi sequi sed at, id unde similique adipisci architecto, eum optio dolorum, ullam omnis reiciendis nulla cupiditate blanditiis rerum repellendus Lorem
+                                        ipsum dolor sit amet consectetur adipisicing elit. Velit rem magnam natus sapiente? quae?
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="" class="mt-2 italic opacity-80 hover:text-blue-600 duration-200"><span>By: </span>Harubic</a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1  md:grid-cols-5 gap-5 my-5 border bg-white px-2 md:p-0 shadow-md hover:shadow-xl duration-200">
+                        <div class="grid col-span-2 justify-start relative">
+                            <span class="p-1 m-2 bg-red-500 text-white absolute rounded-lg rounded-t-none rounded-r-lg">New!</span>
+                            <img src="img/jacek-dylag-SPpsFbCaN2A-unsplash.jpg" alt="thumbnail" class="h-full">
+                        </div>
+                        <div class="grid row-auto col-span-3 font-sans py-4 mx-4 h-44">
+                            <a href="/" class="hover:text-blue-600 duration-200">
+                                <h1 class="text-2xl font-bold">beautifull title here</h1>
+
+                                <p class="italic text-slate-400">20 maret 2022</p>
+                                <div class="h-24 overflow-hidden">
+                                    <p class="text-slate-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad commodi sequi sed at, id unde similique adipisci architecto, eum optio dolorum, ullam omnis reiciendis nulla cupiditate blanditiis rerum repellendus Lorem
+                                        ipsum dolor sit amet consectetur adipisicing elit. Velit rem magnam natus sapiente? quae?
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="" class="mt-2 italic opacity-80 hover:text-blue-600 duration-200"><span>By: </span>Harubic</a>
+                        </div>
                     </div>
                 </div>
                 <!-- sidebar -->
-                <div class="grid text-slate-600 col-span-1">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non at libero cumque id, laudantium voluptas nesciunt hic odio aperiam consequatur vel mollitia aliquam numquam provident adipisci unde, odit illum quis?
+                <div class="grid row-auto col-span-1 gap-3">
+                    <!-- recent post -->
+                    <div class="grid row-span-2 border bg-white mt-0">
+                        <div class="bg-[url('img/jacek-dylag-SPpsFbCaN2A-unsplash.jpg')]">
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- end postingan -->
     </div>
-    <!-- end postinga -->
 
+    <!-- footer -->
+    <footer class="w-100 relative bottom-0 bg-slate-600 p-3">
+        <div class="container">
+            <div class="text-white text-center">
+                <h1>&copy Copyright <a href="/" class="hover:text-blue-600 duration-200">Harubic</a></h1>
+            </div>
+        </div>
+    </footer>
 
 
 
