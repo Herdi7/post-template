@@ -13,19 +13,26 @@
 <body class="capitalize bg-zinc-100">
 
     <!-- navbar -->
-    <nav class="bg-gradient-to-b from-blue-700 to-blue-400 w-full p-3 fixed top-0 z-40">
+    <nav class="bg-gradient-to-b from-blue-700 to-blue-400 w-full p-3 fixed top-0 z-30">
         <div class="container">
             <div class="flex justify-around w-full items-center">
                 <div class="text-white">
                     <span class="text-3xl font-bold">Harubic</span>
                 </div>
-
-                <div class="w-80 hidden md:block">
-                    <ul class="flex justify-between uppercase">
+                <!-- nav-toogle -->
+                <div id="nav-toogle" class="md:hidden flex flex-col gap-1 w-7 relative mb-2">
+                    <input type="checkbox" class="peer absolute scale-x-[2.5] scale-y-[2.2] opacity-0 right-2 top-1 cursor-pointer mb-2 z-50" id="toogle">
+                    <span class="border-2 border-slate-800 dark:border-white w-full peer-checked:rotate-45 peer-checked:translate-y-2 duration-75 mt-2"></span>
+                    <span class="border-2 border-slate-800 dark:border-white w-full peer-checked:opacity-0"></span>
+                    <span class="border-2 border-slate-800 dark:border-white w-full peer-checked:-rotate-45 peer-checked:-translate-y-2  duration-75"></span>
+                </div>
+                <div class="md:w-80 w-96 px-8 py-3 md:block duration-300 md:static z-50 fixed top-14 bottom-0 -left-96 bg-slate-600 md:bg-transparent" id="navbar">
+                    <ul class="flex md:flex-row flex-col justify-between uppercase h-1/2">
                         <li class="text-slate-300 font-bold"><a href="/">Home</a></li>
-                        <li class="text-white hover:text-slate-400 duration-200"><a href="/">Blog</a></li>
-                        <li class="text-white hover:text-slate-400 duration-200"><a href="/">Gallery</a></li>
-                        <li class="text-white hover:text-slate-400 duration-200"><a href="/">About</a></li>
+                        <li class="text-white md:hover:text-slate-400 duration-200 hover:bg-blue-400 p-2 md:p-0 hover:md:bg-transparent cursor-pointer"><a href="/">Blog</a></li>
+                        <li class="text-white md:hover:text-slate-400 duration-200 hover:bg-blue-400 p-2 md:p-0 hover:md:bg-transparent cursor-pointer"><a href="/">Gallery</a></li>
+                        <li class="text-white md:hover:text-slate-400 duration-200 hover:bg-blue-400 p-2 md:p-0 hover:md:bg-transparent cursor-pointer"><a href="/">About</a></li>
+
                     </ul>
                 </div>
             </div>
@@ -104,19 +111,52 @@
                             <a href="" class="mt-2 italic opacity-80 hover:text-blue-600 duration-200"><span>By: </span>Harubic</a>
                         </div>
                     </div>
+                    <!-- pagination  -->
+                    <div class="my-3 flex mx-auto">
+                        <div class="flex justify-center border border-slate-500 rounded">
+                            <span class="block px-2 border-r border-slate-500 hover:bg-blue-600 cursor-pointer duration-200">First</span>
+                            <span class="block px-2 border-r border-slate-500 hover:bg-blue-600 cursor-pointer duration-200">1</span>
+                            <span class="block px-2 border-r border-slate-500 bg-blue-600 cursor-pointer">2</span>
+                            <span class="block px-2 border-r border-slate-500 hover:bg-blue-600 cursor-pointer duration-200">3</span>
+                            <span class="block px-2 border-r border-slate-500 hover:bg-blue-600 cursor-pointer duration-200">next</span>
+                        </div>
+                    </div>
                 </div>
-                <!-- sidebar -->
-                <div class="grid row-auto col-span-1 gap-3">
-                    <!-- recent post -->
-                    <div class="grid row-span-2 border bg-white mt-0">
-                        <div class="bg-[url('img/jacek-dylag-SPpsFbCaN2A-unsplash.jpg')]">
 
+                <!-- end pagination -->
+                <!-- sidebar -->
+                <div class="col-span-1 gap-4">
+                    <!-- search form -->
+                    <div class="my-4">
+                        <form action="" method="get" class="grid grid-cols-6 gap-0">
+                            <input type="text" placeholder="Cari..." class="col-span-5 px-2 py-1 rounded outline-blue-400 border-2 border-blue-400 focus:ring-2 placeholder:italic">
+                            <button class="col-span-1 border bg-blue-300 hover:bg-blue-500 rounded duration-200">Cari</button>
+                        </form>
+                    </div>
+                    <!-- recent post -->
+                    <div class="grid row-span-2 border bg-white mt-0 shadow-md p-3">
+                        <h1 class="text-2xl italic">recent post</h1>
+                        <div class="flex flex-col gap-3 mt-2">
+                            <a href="/" class="hover:text-blue-600 duration-200">
+                                <h2 class="text-xl border-l-2 border-green-300 pl-2">Lorem, ipsum dolor.</h2>
+                            </a>
+                            <a href="/" class="hover:text-blue-600 duration-200">
+                                <h2 class="text-xl border-l-2 border-green-300 pl-2">Lorem sit amet consectetur.</h2>
+                            </a>
+                            <a href="/" class="hover:text-blue-600 duration-200">
+                                <h2 class="text-xl border-l-2 border-green-300 pl-2">rekomendasi lagu di spotify.</h2>
+                            </a>
+                            <a href="/" class="hover:text-blue-600 duration-200">
+                                <h2 class="text-xl border-l-2 border-green-300 pl-2">Youtuber pewdipie menembus 100m Subscriber.</h2>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- end postingan -->
+
+
     </div>
 
     <!-- footer -->
@@ -124,6 +164,7 @@
         <div class="container">
             <div class="text-white text-center">
                 <h1>&copy Copyright <a href="/" class="hover:text-blue-600 duration-200">Harubic</a></h1>
+
             </div>
         </div>
     </footer>
@@ -132,7 +173,9 @@
 
 
 
-
+    <!-- script -->
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 
