@@ -1,15 +1,39 @@
 $(document).ready(function() {
+    // feather icons replace
     feather.replace()
+
+    // navbar
+    const navbarNav = $('#navbar-nav')
+    const nav = $('nav')
     $('#nav-toggle:checkbox').change(function() {
-        const navbarNav = $('#navbar-nav')
         if (this.checked) {
-            navbarNav.removeClass('-translate-x-96')
-            $('body').addClass('overflow-hidden')
+            navbarNav.removeClass('-translate-x-full')
+            $('body').addClass(' overflow-y-hidden')
         } else {
-            navbarNav.addClass('-translate-x-96')
-            $('body').removeClass('overflow-hidden')
+            navbarNav.addClass('-translate-x-full')
+            $('body').removeClass(' overflow-y-hidden')
         }
-    });
+    })
+
+    $(document).scroll(function() {
+        if ($(this).scrollTop() > 71) {
+            nav.fadeOut();
+        } else {
+            nav.fadeIn().css({ "position": "fixed", "top": "0" });
+        }
+    })
 
 
-});
+
+
+
+
+
+
+
+
+
+
+
+
+})
