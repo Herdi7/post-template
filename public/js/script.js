@@ -5,6 +5,7 @@ $(document).ready(function() {
     // navbar
     const navbarNav = $('#navbar-nav')
     const nav = $('nav')
+    let lastScrollTop = 0
     $('#nav-toggle:checkbox').change(function() {
         if (this.checked) {
             navbarNav.removeClass('-translate-x-full')
@@ -16,11 +17,13 @@ $(document).ready(function() {
     })
 
     $(document).scroll(function() {
-        if ($(this).scrollTop() > 71) {
-            nav.fadeOut();
+        st = $(this).scrollTop()
+        if (st < lastScrollTop) {
+            nav.fadeIn().css({ "position": "fixed" });
         } else {
-            nav.fadeIn().css({ "position": "fixed", "top": "0" });
+            nav.fadeOut().removeClass('fixed');
         }
+        lastScrollTop = st;
     })
 
 
