@@ -1,16 +1,19 @@
 module.exports = {
-    content: ["./public/**/*{html, js}"],
+    content: ["./public/**/*.{html, js}"],
+    darkMode: 'class',
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                "primary": "#3C05B1",
+                "success": "#31D616",
+                "light": "#F6F6F6"
+            },
+        },
         container: {
             center: true,
-            padding: {
-                DEFAULT: '1rem',
-                sm: '1rem',
-                lg: '1rem',
-                xl: '1rem',
-                '2xl': '6rem',
-            }
+        },
+        fontFamily: {
+            "roboto": ['Roboto', 'sans-serif']
         },
     },
     plugins: [],

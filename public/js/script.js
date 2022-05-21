@@ -1,14 +1,15 @@
 $(document).ready(function() {
-    $('#nav-toogle :checkbox').change(function() {
+    feather.replace()
+    $('#nav-toggle:checkbox').change(function() {
+        const navbarNav = $('#navbar-nav')
         if (this.checked) {
-            $('#navbar').addClass('left-0');
-            $('#navbar').removeClass('-left-96')
+            navbarNav.removeClass('-translate-x-96')
             $('body').addClass('overflow-hidden')
         } else {
-            $('#navbar').removeClass('left-0');
-            $('#navbar').addClass('-left-96')
+            navbarNav.addClass('-translate-x-96')
             $('body').removeClass('overflow-hidden')
         }
     });
+
 
 });

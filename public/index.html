@@ -6,186 +6,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harubic | Beranda</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <!-- style -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- feather icon -->
+    <script src="js/feather.js"></script>
+
 </head>
 
-<body class="capitalize bg-zinc-100">
+<body class="font-roboto">
 
-    <!-- navbar -->
-    <nav class="bg-gradient-to-b from-blue-700 to-blue-400 w-full p-3 fixed top-0 z-30">
+    <!-- awal navbar -->
+    <nav class="fixed top-0 py-3 px-4 bg-light w-full">
         <div class="container">
-            <div class="flex justify-around w-full items-center">
-                <div class="text-white">
-                    <span class="text-3xl font-bold">Harubic</span>
+            <div class="flex justify-between">
+                <!-- baris awal -->
+                <div class="flex gap-6">
+                    <!-- hamburger menu -->
+                    <div class="flex flex-col justify-center relative w-6 gap-2 sm:hidden">
+                        <input type="checkbox" id="nav-toggle" class="absolute z-20 w-full h-full opacity-0 hover:cursor-pointer peer">
+                        <span class="before:absolute before:border before:border-black before:w-full peer-checked:rotate-45 peer-checked:translate-y-3 transition"></span>
+                        <span class="before:absolute before:border before:border-black before:w-full peer-checked:opacity-0 transition"></span>
+                        <span class="before:absolute before:border before:border-black before:w-full peer-checked:-translate-y-1 peer-checked:-rotate-45 transition"></span>
+                    </div>
+                    <!-- brand -->
+                    <a href="/"><img src="img/name.png" alt="Brand" class="h-12"></a>
                 </div>
-                <!-- nav-toogle -->
-                <div id="nav-toogle" class="md:hidden flex flex-col gap-1 w-7 relative mb-2">
-                    <input type="checkbox" class="peer absolute scale-x-[2.5] scale-y-[2.2] opacity-0 right-2 top-1 cursor-pointer mb-2 z-50" id="toogle">
-                    <span class="border-2 border-slate-800 dark:border-white w-full peer-checked:rotate-45 peer-checked:translate-y-2 duration-75 mt-2"></span>
-                    <span class="border-2 border-slate-800 dark:border-white w-full peer-checked:opacity-0"></span>
-                    <span class="border-2 border-slate-800 dark:border-white w-full peer-checked:-rotate-45 peer-checked:-translate-y-2  duration-75"></span>
-                </div>
-                <div class="md:w-80 w-96 px-8 py-3 md:block duration-300 md:static z-50 fixed top-14 bottom-0 -left-96 bg-slate-600 md:bg-transparent" id="navbar">
-                    <ul class="flex md:flex-row flex-col justify-between uppercase h-1/2">
-                        <li class="text-slate-300 font-bold"><a href="/">Home</a></li>
-                        <li class="text-white md:hover:text-slate-400 duration-200 hover:bg-blue-400 p-2 md:p-0 hover:md:bg-transparent cursor-pointer"><a href="/">Blog</a></li>
-                        <li class="text-white md:hover:text-slate-400 duration-200 hover:bg-blue-400 p-2 md:p-0 hover:md:bg-transparent cursor-pointer"><a href="/">Gallery</a></li>
-                        <li class="text-white md:hover:text-slate-400 duration-200 hover:bg-blue-400 p-2 md:p-0 hover:md:bg-transparent cursor-pointer"><a href="/">About</a></li>
-
+                <!-- nav-link -->
+                <div class="flex sm:items-center absolute mt-[3.7rem] bg-light border-t py-2 px-6 w-2/3 left-0 h-screen shadow-lg -translate-x-96 transition-transform duration-300 sm:translate-x-0 sm:static sm:mt-0 sm:h-fit sm:shadow-none" id="navbar-nav">
+                    <ul class="flex gap-4 font-bold flex-col w-full sm:flex-row">
+                        <li class="border-slate-300 pb-1 bg-zinc-200 py-1 px-2 transition sm:border-none sm:bg-transparent">
+                            <a href="#" class="text-primary w-full block">
+                                <i data-feather="home" class="inline mr-4 sm:hidden"></i> Home
+                            </a>
+                        </li>
+                        <li class="border-slate-300 pb-1 hover:bg-zinc-200 py-1 px-2 rounded transition sm:border-none sm:hover:bg-transparent">
+                            <a href="#" class="hover:text-primary w-full block">
+                                <i data-feather="layout" class="inline mr-4 sm:hidden"></i> Blog
+                            </a>
+                        </li>
+                        <li class="border-slate-300 pb-1 hover:bg-zinc-200 py-1 px-2 transition sm:border-none sm:hover:bg-transparent">
+                            <a href="#" class="hover:text-primary w-full block">
+                                <i data-feather="grid" class="inline mr-4 sm:hidden"></i> Topik
+                            </a>
+                        </li>
+                        <li class="border-slate-300 pb-1 hover:bg-zinc-200 py-1 px-2 transition sm:border-none sm:hover:bg-transparent">
+                            <a href="#" class="hover:text-primary w-full block">
+                                <i data-feather="info" class="inline mr-4 sm:hidden"></i> About
+                            </a>
+                        </li>
                     </ul>
+                </div>
+                <!-- search/ login -->
+                <div class="flex items-center h-12 gap-4">
+                    <i class="hover:text-primary cursor-pointer mr-3" data-feather="search"></i>
+                    <i class="hover:text-primary cursor-pointer" data-feather="bell"></i>
+                    <i class="hover:text-primary cursor-pointer" data-feather="user-plus"></i>
                 </div>
             </div>
         </div>
     </nav>
-    <!-- end navbar -->
 
-    <!-- recommended artikel -->
-    <!-- not yet -->
-    <!-- end recommended artikel -->
+    <!-- akhir navbar -->
 
-    <div class="container">
-        <!-- postingan -->
-        <div class="row-auto mt-24">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <div class="grid row-auto col-span-2">
-                    <h1 class="font-bold text-2xl italic relative before:absolute before:border-b-2 before:w-full before:top-10 before:border-slate-300">New Post!</h1>
-
-                    <!-- post -->
-                    <div class="grid grid-cols-1  md:grid-cols-5 gap-5 my-5 border bg-white px-2 md:p-0 shadow-md hover:shadow-xl duration-200 ">
-                        <div class="grid col-span-2 justify-start">
-                            <span class="p-1 m-2 bg-red-500 text-white absolute rounded-lg rounded-t-none rounded-r-lg">New!</span>
-                            <img src="img/elizeu-dias-SEq9dyZSe6c-unsplash.jpg" alt="thumbnail" class="h-full">
-                        </div>
-                        <div class="grid row-auto col-span-3 font-sans py-4 mx-4">
-                            <a href="/" class="hover:text-blue-600 duration-200">
-                                <h1 class="text-2xl font-bold">beautifull title here</h1>
-
-                                <p class="italic text-slate-400">20 maret 2022</p>
-                                <div class="h-24 overflow-hidden">
-                                    <p class="text-slate-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad commodi sequi sed at, id unde similique adipisci architecto, eum optio dolorum, ullam omnis reiciendis nulla cupiditate blanditiis rerum repellendus Lorem
-                                        ipsum dolor sit amet consectetur adipisicing elit. Velit rem magnam natus sapiente? quae?
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="" class="mt-2 italic opacity-80 hover:text-blue-600 duration-200"><span>By: </span>Harubic</a>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1  md:grid-cols-5 gap-5 my-5 border bg-white px-2 md:p-0 shadow-md hover:shadow-xl duration-200">
-                        <div class="grid col-span-2 justify-start">
-                            <span class="p-1 m-2 bg-red-500 text-white absolute rounded-lg rounded-t-none rounded-r-lg">New!</span>
-                            <img src="img/heroSection.jpg" alt="thumbnail" class="h-full">
-                        </div>
-                        <div class="grid row-auto col-span-3 font-sans py-4 mx-4">
-                            <a href="/" class="hover:text-blue-600 duration-200">
-                                <h1 class="text-2xl font-bold">beautifull title here</h1>
-
-                                <p class="italic text-slate-400">20 maret 2022</p>
-                                <div class="h-24 overflow-hidden">
-                                    <p class="text-slate-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad commodi sequi sed at, id unde similique adipisci architecto, eum optio dolorum, ullam omnis reiciendis nulla cupiditate blanditiis rerum repellendus Lorem
-                                        ipsum dolor sit amet consectetur adipisicing elit. Velit rem magnam natus sapiente? quae?
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="" class="mt-2 italic opacity-80 hover:text-blue-600 duration-200"><span>By: </span>Harubic</a>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1  md:grid-cols-5 gap-5 my-5 border bg-white px-2 md:p-0 shadow-md hover:shadow-xl duration-200 max-h-max">
-                        <div class="grid col-span-2 justify-start relative">
-                            <span class="p-1 m-2 bg-red-500 text-white absolute rounded-lg rounded-t-none rounded-r-lg">New!</span>
-                            <img src="img/jacek-dylag-SPpsFbCaN2A-unsplash.jpg" alt="thumbnail" class="h-full w-full">
-                        </div>
-                        <div class="grid row-auto col-span-3 font-sans py-4 mx-4 h-44">
-                            <a href="/" class="hover:text-blue-600 duration-200">
-                                <h1 class="text-2xl font-bold">beautifull title here</h1>
-
-                                <p class="italic text-slate-400">20 maret 2022</p>
-                                <div class="h-24 overflow-hidden">
-                                    <p class="text-slate-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad commodi sequi sed at, id unde similique adipisci architecto, eum optio dolorum, ullam omnis reiciendis nulla cupiditate blanditiis rerum repellendus Lorem
-                                        ipsum dolor sit amet consectetur adipisicing elit. Velit rem magnam natus sapiente? quae?
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="" class="mt-2 italic opacity-80 hover:text-blue-600 duration-200"><span>By: </span>Harubic</a>
-                        </div>
-                    </div>
-                    <!-- pagination  -->
-                    <div class="my-3 flex mx-auto">
-                        <div class="flex justify-center border border-slate-500 rounded">
-                            <span class="block px-2 border-r border-slate-500 hover:bg-blue-600 cursor-pointer duration-200">First</span>
-                            <span class="block px-2 border-r border-slate-500 hover:bg-blue-600 cursor-pointer duration-200">1</span>
-                            <span class="block px-2 border-r border-slate-500 bg-blue-600 cursor-pointer">2</span>
-                            <span class="block px-2 border-r border-slate-500 hover:bg-blue-600 cursor-pointer duration-200">3</span>
-                            <span class="block px-2 border-r border-slate-500 hover:bg-blue-600 cursor-pointer duration-200">next</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- end pagination -->
-                <!-- sidebar -->
-                <div class="flex flex-col col-span-1 gap-y-4">
-                    <!-- search form -->
-                    <div class="my-4">
-                        <form action="" method="get" class="grid grid-cols-6 gap-0">
-                            <input type="search" placeholder="Cari..." class="col-span-5 px-2 py-1 rounded outline-blue-400 border-2 border-blue-400 focus:ring-2 placeholder:italic">
-                            <button class="col-span-1 border border-blue-400 hover:border-blue-500 bg-blue-300 hover:bg-blue-500 rounded duration-200">Cari</button>
-                        </form>
-                    </div>
-                    <!-- subscribes and login -->
-                    <div class="row-span-2 border bg-white mt-0 shadow-md p-3">
-                        <h1 class="text-2xl italic text-center">create your post now, its <span class="uppercase font-bold text-transparent bg-clip-text text-clip bg-gradient-to-r from-blue-200 via-green-400 to-green-800">FREE!</span></h1>
-
-                        <div class="flex flex-col">
-                            <img src="img/svg/email-svgrepo-com.svg" alt="email" class="h-28 my-5">
-                            <a href="upload-post.html" class="border border-blue-600 bg-blue-500 p-1 rounded text-white text-center hover:bg-blue-700 duration-200">Upload Now!</a>
-                        </div>
-                    </div>
-                    <!-- recent post -->
-                    <div class="border bg-white mt-0 shadow-md p-3">
-                        <h1 class="text-2xl italic">recent post</h1>
-                        <div class="flex flex-col gap-3 mt-2">
-                            <a href="/" class="hover:text-blue-600 duration-200">
-                                <h2 class="text-xl border-l-2 border-green-300 pl-2">Lorem, ipsum dolor.</h2>
-                            </a>
-                            <a href="/" class="hover:text-blue-600 duration-200">
-                                <h2 class="text-xl border-l-2 border-green-300 pl-2">Lorem sit amet consectetur.</h2>
-                            </a>
-                            <a href="/" class="hover:text-blue-600 duration-200">
-                                <h2 class="text-xl border-l-2 border-green-300 pl-2">rekomendasi lagu di spotify.</h2>
-                            </a>
-                            <a href="/" class="hover:text-blue-600 duration-200">
-                                <h2 class="text-xl border-l-2 border-green-300 pl-2">Youtuber pewdipie menembus 100m Subscriber.</h2>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end postingan -->
-
-
-    </div>
-
-    <!-- footer -->
-    <footer class="w-100 relative bottom-0 bg-slate-600 p-3">
-        <div class="container">
-            <div class="text-white text-center">
-                <h1>&copy Copyright <a href="/" class="hover:text-blue-600 duration-200">Harubic</a></h1>
-
-            </div>
-        </div>
-    </footer>
-
-
-
-
-
-    <!-- script -->
+    <!--feather icon replace  -->
+    <!-- js -->
     <script src="js/jquery-3.6.0.js"></script>
     <script src="js/script.js"></script>
-
 </body>
 
 </html>
