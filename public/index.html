@@ -62,9 +62,9 @@
                 </div>
                 <!-- search/ login -->
                 <div class="flex items-center h-12 gap-4">
-                    <i class="hover:text-primary cursor-pointer mr-3" data-feather="search"></i>
-                    <i class="hover:text-primary cursor-pointer" data-feather="bell"></i>
-                    <i class="hover:text-primary cursor-pointer" data-feather="user-plus"></i>
+                    <i class="hover:text-primary cursor-pointer mr-3 tooltip-trigger" data-feather="search" data-tooltip="Cari"></i>
+                    <i class="hover:text-primary cursor-pointer tooltip-trigger" data-feather="bell" data-tooltip="Notifikasi"></i>
+                    <i class="hover:text-primary cursor-pointer tooltip-trigger" data-feather="user-plus" data-tooltip="Buat Akun"></i>
                 </div>
             </div>
         </div>
@@ -72,8 +72,14 @@
     <!-- akhir navbar -->
 
     <div class="container mt-20">
+        <!-- adsense -->
+        <mark class="h-16 block">
+            <img src="img/banner-free-02.jpg" alt="adsense" class="h-full w-full">
+        </mark>
+        <!-- akhir adsense -->
+
         <!-- hero -->
-        <main class="h-72 sm:h-80 md:h-96">
+        <main class="h-72 sm:h-80 md:h-96 mt-6">
             <figure class="h-full relative">
                 <img src="img/gambar-1.jpg" alt="main" class="h-full rounded w-2/3">
                 <figcaption class="absolute border rounded py-2 px-3 bg-light top-5 right-5 w-2/4 h-5/6 shadow-md">
@@ -100,8 +106,8 @@
 
         <!-- bagian jelajahi topik -->
         <section class="mt-5 grid-rows-2">
-            <header class="relative pb-1 before:absolute before:border before:border-black before:bottom-0 before:w-2/4">
-                <h1>Jelajahi Topik</h1>
+            <header class="relative pb-1 before:absolute before:border before:border-slate-300 before:bottom-0 before:w-2/4">
+                <h1 class="font-bold">Jelajahi Topik</h1>
             </header>
             <div class="overflow-hidden h-16 py-3 px-1">
                 <div class="flex w-max h-full text-white">

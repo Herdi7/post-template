@@ -6,7 +6,8 @@ module.exports = {
             colors: {
                 "primary": "#3C05B1",
                 "success": "#31D616",
-                "light": "#F6F6F6"
+                "light": "#F6F6F6",
+                "dark": "#1B0E0E",
             },
         },
         container: {
