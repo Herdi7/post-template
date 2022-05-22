@@ -41,9 +41,18 @@ $(document).ready(function() {
         }
     })
 
+    $(window).click(function(e) {
+        // search
+        if (e.target.matches('#search-trigger')) {
+            $('#searchModal').fadeIn()
+        } else if (!e.target.id == "searchSection" || !$(e.target).parents("#searchSection").length) {
+            $('#searchModal').fadeOut()
+        }
+    })
+
     function changeTooltipPosition(event) {
         var tooltipX = event.pageX - 12;
-        var tooltipY = event.pageY + 24;
+        var tooltipY = event.pageY + 18;
         $('div.tooltip').css({ top: tooltipY, left: tooltipX });
     };
 
